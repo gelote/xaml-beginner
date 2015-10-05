@@ -8,14 +8,15 @@
     mc:Ignorable="d">
 
     <Page.TopAppBar>
-        <AppBar>
-            <AppBarButton Label="Home">
+        <AppBar UseLayoutRounding="True">
+            <AppBarButton x:Name="AppBarHome" Label="Home" Click="AppBarHome_Click">
                 <AppBarButton.Icon>
                     <SymbolIcon Symbol="Home" />
                 </AppBarButton.Icon>
             </AppBarButton>
         </AppBar>
     </Page.TopAppBar>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.50*"/>
@@ -33,7 +34,10 @@
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Order Items:" />
         <ListView Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Margin="10" />
         <ListView Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" Margin="10" />
-        <TextBlock Text="**Add to Order**" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" />
-        <TextBlock Text="**Submit Order**" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Button x:Name="AddOrder" Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" />
+        <Button x:Name="SubmitOrder" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
     </Grid>
 </Page>
+
+
+
